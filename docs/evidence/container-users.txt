@@ -1,0 +1,4 @@
+docker run --rm simple_python_app:v5 id
+uid=0(root) gid=0(root) groups=0(root)
+docker run --rm simple_python_app:v6 id
+uid=999(app) gid=999(app) groups=999(app)

@@ -1,0 +1,19 @@
+docker compose ps
+NAME                                       IMAGE                      COMMAND                  SERVICE             CREATED          STATUS                    PORTS
+bsu13-check-0a52aede-db-1                  postgres:16.2-alpine       "docker-entrypoint.s…"   db                  12 seconds ago   Up 11 seconds (healthy)   5432/tcp
+bsu13-check-0a52aede-simple_python_app-1   bsu13-check-0a52aede:api   "uvicorn app:app --h…"   simple_python_app   12 seconds ago   Up Less than a second     
+bsu13-check-0a52aede-web-1                 nginx:alpine               "/docker-entrypoint.…"   web                 12 seconds ago   Up Less than a second     127.0.0.1:8085->80/tcp
+GET / -> HTTP 200
+{"message": "Hello World", "postgres_version": "PostgreSQL 16.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 13.2.1_git20231014) 13.2.1 20231014, 64-bit"}
+GET /hello/Han -> HTTP 200
+{"message": "Hello Han"}
+POST /items/test -> HTTP 200
+{"id": 1, "name": "test"}
+GET /items -> HTTP 200
+[{"id": 1, "name": "test"}]
+docker compose down; docker compose up -d
+GET /items -> HTTP 200
+[{"id": 1, "name": "test"}]
+docker compose down -v
+docker compose ps -a
+NAME      IMAGE     COMMAND   SERVICE   CREATED   STATUS    PORTS

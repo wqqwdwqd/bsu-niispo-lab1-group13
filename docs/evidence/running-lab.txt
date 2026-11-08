@@ -1,0 +1,21 @@
+GET / on localhost:8080 -> HTTP 200, Welcome to nginx!
+
+GET / on localhost:8081 -> HTTP 200, Welcome to nginx!
+
+GET / on localhost:8082 -> HTTP 200, Welcome to nginx!
+
+GET / on localhost:8083 -> HTTP 200, Студент: Han Yu, Группа: 13
+
+GET / on localhost:8084 -> HTTP 200, Студент: Han Yu, Группа: 13
+
+GET localhost:8001/ -> HTTP 200
+{"message":"Hello World","postgres_version":"PostgreSQL 16.2 on x86_64-pc-linux-musl, compiled by gcc (Alpine 13.2.1_git20231014) 13.2.1 20231014, 64-bit"}
+
+GET localhost:8001/items -> HTTP 200
+[{"id":1,"name":"test"}]
+
+GET localhost:8001/hello/Han -> HTTP 200
+{"message":"Hello Han"}
+
+docker image inspect hy20010919/lab1-task2:v1 --format '{{json .RepoDigests}}'
+["hy20010919/lab1-task2@sha256:cf983586c35c16eabd642c4b4f29868671a0cc985d1c7682f6b44d9cfed286e3","lab1-task2@sha256:cf983586c35c16eabd642c4b4f29868671a0cc985d1c7682f6b44d9cfed286e3"]

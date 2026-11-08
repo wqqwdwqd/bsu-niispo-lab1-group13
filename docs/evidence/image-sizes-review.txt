@@ -1,0 +1,8 @@
+IMAGE                         ID             DISK USAGE   CONTENT SIZE   EXTRA
+simple_python_app:v1          e8ebfa20e968        257MB         62.2MB   U    
+simple_python_app:v2          628a29a1c188        257MB         62.2MB        
+simple_python_app:v3          1e7325eb4da0        290MB         78.1MB        
+simple_python_app:v4          042211f14da8        257MB         62.2MB        
+simple_python_app:v5          dde7828a0176        283MB         75.1MB        
+simple_python_app:v5-alpine   389c8e4a7efd        173MB         49.5MB        
+simple_python_app:v6          7846dfbf5d80        283MB         75.1MB
